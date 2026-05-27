@@ -1,0 +1,12 @@
+google-api-python-client
+python-dotenv
+tqdm
+streamlit
+pandas
+youtube-transcript-api
+google-genai
+wordcloud
+matplotlib
+nltk
+fastapi
+uvicorn
