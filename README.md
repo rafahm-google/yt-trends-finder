@@ -7,23 +7,18 @@ A Python-based tool to monitor, score, and analyze trending YouTube videos about
 *   **YouTube Scraper**: Fetches videos based on search queries or Topic IDs (Knowledge Graph) within a specific lookback window (e.g., last 6 hours).
 *   **Composite Scoring**: Ranks videos based on a combination of views per minute, likes, and comment activity.
 *   **Content Extraction**: Automatically fetches video comments and attempts to retrieve/generate transcripts.
-*   **AI-Powered Insights (Gemini)**:
-    *   Generates **Social Listening Reports** detailing top themes, audience sentiment, and key takeaways.
-    *   Creates **Advertiser Pitch Decks** highlighting what is trending in the last 24 hours with strategic brand opportunities.
+*   **AI-Powered Insights (Gemini)**: Generates **Social Listening Reports** detailing top themes, audience sentiment, and key takeaways directly from the dashboard.
 *   **Interactive Dashboard**: A Streamlit-based web application to visualize trends, explore video details, view word clouds, and interact with the data.
 
 ## Project Structure
 
 ```
 yt-trends-finder/
-├── analyzer.py                 # Core CLI tool to scrape and score videos
-├── app.py                      # Streamlit web dashboard
-├── finalize_run.py             # Utility to export data and upload to Google Drive
-├── generate_advertiser_deck.py # Script to generate the advertiser deck via Gemini
+├── analyzer.py                 # Scraper logic and CLI tool
+├── app.py                      # Streamlit web dashboard (Main Entry Point)
 ├── generate_enhanced_report.py # Script to generate enhanced social listening reports
 ├── generate_final_report.py    # Helper to format final reports
 ├── generate_html_deck.py       # Helper to generate HTML presentations
-├── topic_analyzer.py           # Script to analyze topics using Gemini
 └── requirements.txt            # Python dependencies
 ```
 
@@ -50,9 +45,6 @@ yt-trends-finder/
     ```env
     YOUTUBE_API_KEY=your_youtube_api_key_here
     GEMINI_API_KEY=your_gemini_api_key_here
-
-    # Optional: Google Drive Folder ID if using finalize_run.py
-    GOOGLE_DRIVE_FOLDER_ID=your_google_drive_folder_id_here
     ```
 
 ## How to Use
@@ -88,17 +80,7 @@ The dashboard allows you to:
 *   See word clouds of comments.
 *   Generate on-demand reports using Gemini.
 
-### 3. Generate Reports manually
 
-You can also run the individual analysis scripts:
-
-```bash
-# Generate a social listening report based on the database
-python topic_analyzer.py
-
-# Generate a 2-page advertiser deck for the last 24 hours of data
-python generate_advertiser_deck.py
-```
 
 ---
 *Note: The user interface and default AI prompts are optimized for Portuguese (Brazil).*
