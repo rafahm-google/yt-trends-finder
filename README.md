@@ -17,7 +17,6 @@ yt-trends-finder/
 ├── analyzer.py                 # Scraper logic and CLI tool
 ├── app.py                      # Streamlit web dashboard (Main Entry Point)
 ├── generate_enhanced_report.py # Script to generate enhanced social listening reports
-├── generate_final_report.py    # Helper to format final reports
 ├── generate_html_deck.py       # Helper to generate HTML presentations
 └── requirements.txt            # Python dependencies
 ```

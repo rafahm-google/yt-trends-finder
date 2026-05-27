@@ -16,8 +16,7 @@ from google.auth.transport.requests import Request
 
 # Import logic from existing scripts
 from analyzer import get_youtube_client, search_videos, get_video_details, fetch_transcript, fetch_comments, is_video_related_to_football
-from generate_final_report import format_date
-from generate_enhanced_report import get_report_content
+from generate_enhanced_report import get_report_content, format_date
 from generate_html_deck import get_html_deck_content
 
 # Cached wrappers to reduce YouTube API quota consumption
